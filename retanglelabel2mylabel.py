@@ -1,7 +1,7 @@
 import cv2
 import os
 import numpy as np
-from shapely.geometry import Polygon, MultiPoint  # 多边形
+from shapely.geometry import Polygon, MultiPoint 
 import time
 import cv2
 import argparse
@@ -31,7 +31,7 @@ def trans(file, line_, wh_list):
         data = np.array(label[i+1:i+9]).astype(int)
         data = data.reshape(4, 2)
 
-        rect = cv2.minAreaRect(data)  # 得到最小外接矩形的（中心(x,y), (宽,高), 旋转角度）
+        rect = cv2.minAreaRect(data)  
         # print(rect)
         box = cv2.boxPoints(rect).astype(int)
 
