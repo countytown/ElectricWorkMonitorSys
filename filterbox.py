@@ -22,10 +22,10 @@ def need_boxs(bbox, cls_ids):
     no_belt_list = []
     tizi_list = []
     for i in range(len(bbox)):
-        if cls_ids[i] == 2 or cls_ids[i] == 3:  # 无安全帽 + 有安全帽
+        if cls_ids[i] == 2 or cls_ids[i] == 3: 
             personlist.append(bbox[i])
             person_clslist.append(cls_ids[i])
-        if cls_ids[i] == 0:  # 无安全带   + 有安全带
+        if cls_ids[i] == 0:  
             no_belt_list.append(bbox[i])
         if cls_ids[i] == 5:
             tizi_list.append(bbox[i])
@@ -219,7 +219,7 @@ def getrepresent_point(oenrect, objtype):
     maxy = ally[3]
     leftuppoint = (minx, miny)
     rightdownpoint = (maxx, maxy)
-    waijie2point = [leftuppoint, rightdownpoint]  #计算得到斜框的外接矩形框
+    waijie2point = [leftuppoint, rightdownpoint]  
 
     def take_y(elem):
         return elem[1]
@@ -229,24 +229,24 @@ def getrepresent_point(oenrect, objtype):
     p3 = (oenrect[4], oenrect[5])
     p4 = (oenrect[6], oenrect[7])
     four_points = [p1, p2, p3, p4]
-    four_points.sort(reverse=True, key=take_y)  # y坐标大的在前面，以y为标准
+    four_points.sort(reverse=True, key=take_y) 
     lowest_2points = four_points[:2]
     x1 = lowest_2points[0][0]
     y1 = lowest_2points[0][1]
     x2 = lowest_2points[1][0]
     y2 = lowest_2points[1][1]
-    if objtype == 'insulator':  # 绝缘子用下线中点代表
+    if objtype == 'insulator': 
         Insumidpoint = (int((x1 + x2) / 2), int((y1 + y2) / 2))
-        InsuWidth = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5  # 勾股定理
+        InsuWidth = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5 
         return Insumidpoint, InsuWidth, waijie2point
     else:
-        highest_2points = four_points[2:4]   # 人头用上线中点代表
+        highest_2points = four_points[2:4]  
         x1 = highest_2points[0][0]
         y1 = highest_2points[0][1]
         x2 = highest_2points[1][0]
         y2 = highest_2points[1][1]
         HeadUpmidpoint = (int((x1 + x2) / 2), int((y1 + y2) / 2))
-        HeadWidth = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5  # 勾股定理
+        HeadWidth = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5 
         return HeadUpmidpoint, HeadWidth, waijie2point
 
 def process_height_result(img, bboxs, cls_confs, cls_idss, path ,opt,vid_writer):
@@ -259,16 +259,15 @@ def process_height_result(img, bboxs, cls_confs, cls_idss, path ,opt,vid_writer)
     insuconflist = [0 for x in range(0, 20)]
     if opt.simulate:
         print('warning!!! simulating!!!')
-        for bbox, cls_ids, cls_conf in zip(bboxs, cls_idss, cls_confs):  # 这也是一帧里的所有框  要筛选出belt！！！！
-            insulatorlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 1]  # 绝缘子
+        for bbox, cls_ids, cls_conf in zip(bboxs, cls_idss, cls_confs):  
             insuconflist = [cls_conf[i] for i in range(len(bbox)) if cls_ids[i] == 1]
             personlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 0]  #
     else:
-        for bbox, cls_ids, cls_conf in zip(bboxs, cls_idss, cls_confs):  # 这也是一帧里的所有框  要筛选出belt！！！！
-            insulatorlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 4]  # 绝缘子
+        for bbox, cls_ids, cls_conf in zip(bboxs, cls_idss, cls_confs): 
+            insulatorlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 4] 
 
             insuconflist = [cls_conf[i] for i in range(len(bbox)) if cls_ids[i] == 4]
-            personlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 3 or cls_ids[i] == 3]  #BUYAO NOHELMET
+            personlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 3 or cls_ids[i] == 3] 
             # personlist = [bbox[i] for i in range(len(bbox)) if cls_ids[i] == 3]  #
 
 
@@ -397,7 +396,7 @@ def draw_one_pair_line(headpoint, insupoint, this_pair_obj_dis, im,head_pixel_wi
 def segment_work(img, one_pair):
     print('segmentation work')
 
-    head = one_pair[0][4]  # 人头的box xywha
+    head = one_pair[0][4] 
     insu = one_pair[1][4]
     xmin = insu[0][0]
     xmax = insu[1][0]
@@ -419,7 +418,7 @@ def get_dis_to_cams(objInfo, Objtype):
     if Objtype == 'head':
         real_width = 0.26  # human head:25cm
     else:
-        real_width = real_insu_width # insulator head:27cm
+        real_width = real_insu_width
 
 
     pixel_width = objInfo[1]
@@ -440,7 +439,6 @@ def get_horizontal_len(headInfo, insuInfo, head_dis, insu_dis):
     return D,W  # W is real value of W, D is real mean dis
 
 def get_vertical_height_diff(pix_height, mean_D):
-    #传入高度差的像素值 目标到相机的真实距离
     F = global_F
     H = mean_D * pix_height / F
     return H
