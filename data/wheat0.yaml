@@ -1,0 +1,20 @@
+# COCO 2017 dataset http://cocodataset.org - first 128 training images
+# Download command:  python -c "from yolov5.utils.google_utils import gdrive_download; gdrive_download('1n_oKgR81BJtqk75b00eAjdv03qVCQn2f','coco128.zip')"
+# Train command: python train.py --data ./data/coco128.yaml
+# Dataset should be placed next to yolov5 folder:
+#   /parent_folder
+#     /coco128
+#     /yolov5
+
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: /media/lihao/427E-191A/CODE/lh_3080ti/lhcoco0and40degree/train2017.txt  # 118287 images
+val: /media/lihao/427E-191A/CODE/lh_3080ti/lhcoco0and40degree/val2017.txt # 5000 images
+test: /media/lihao/427E-191A/CODE/lh_3080ti/lhcoco0and40degree/test2017.txt  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+#train: /media/lihao/数据集/simulation/white/train2017.txt  # 118287 images
+#val: /media/lihao/数据集/simulation/white/val2017.txt # 5000 images
+# number of classes
+nc: 5
+names: ['0','1','NoHelmet','Helmet','Insulator']
+#nc: 5
+#names: ['head','insulator']
