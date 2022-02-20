@@ -1,4 +1,4 @@
-# ElectricWorkMonitorSys
+# ElectricWorkMonitorSystem
 A monitor system for electrical working, including object detection, tracking, and distance estimation.
 ![2 mp4_20220220_203107286](https://user-images.githubusercontent.com/38877851/154842611-6fed64a6-ebde-4da7-b3f8-0069382fa545.jpg)
 
