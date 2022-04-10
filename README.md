@@ -15,6 +15,7 @@ https://user-images.githubusercontent.com/38877851/162617483-ce133826-9206-49dd-
 
 ## Note
 For usage of the source code and dataset, pelase contact the author first.
+The detection framework is based on https://github.com/countytown/rotate-yolov3.
 
 
 
