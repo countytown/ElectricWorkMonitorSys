@@ -5,7 +5,7 @@ A monitor system for electrical working, including object detection, tracking, a
 
 
 ## Dataset
-We provide the original dataset at https://pan.baidu.com/s/1mYue8Jmjt5jzUoFmT_Sh0w, and the code is 99xn. The citation information will be available after acceptance and contact the author for usage permission before that.
+We provide the original dataset (labeled) at https://pan.baidu.com/s/1mYue8Jmjt5jzUoFmT_Sh0w, and the code is 99xn. The citation information will be available after acceptance and contact the author for usage permission before that.
 
 ## Demo
 ![2 mp4_20220220_204000899](https://user-images.githubusercontent.com/38877851/154842848-f50b1b69-0edb-4e17-881a-ad7c370f20b7.jpg)
