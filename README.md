@@ -6,7 +6,11 @@ A monitor system for electrical working, including object detection, tracking, a
 ![demo1 mp4_20220226_182504380](https://user-images.githubusercontent.com/38877851/155839938-99557328-3c45-49e5-bde9-b10c338eae11.jpg)
 
 
+https://user-images.githubusercontent.com/38877851/162617483-ce133826-9206-49dd-a3a0-179e43ace1e5.mp4
+
+
+
 ## Brief Introduction
 This is the source code for our paper "Real-time safety distance warning framework for proximity detection based on oriented object detection and pinhole model".  The usage and demo will be available soon. If citation is needed, please contact the author.
 ## Dataset
-We provide the original dataset at https://pan.baidu.com/s/1LsGHAPMgIbDIkQZF2XMkEg, the code is auo0. The citation information will be available after acceptance.
+We provide the original dataset at链接：https://pan.baidu.com/s/1mYue8Jmjt5jzUoFmT_Sh0w, and the code is 99xn. The citation information will be available after acceptance and contact the author for usage permission before that.
