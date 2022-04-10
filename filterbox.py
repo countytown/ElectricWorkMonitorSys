@@ -250,11 +250,6 @@ def getrepresent_point(oenrect, objtype):
         return HeadUpmidpoint, HeadWidth, waijie2point
 
 def process_height_result(img, bboxs, cls_confs, cls_idss, path ,opt,vid_writer):
-
-
-
-
-
     insulatorlist = cls_conf = personlist = []
     insuconflist = [0 for x in range(0, 20)]
     if opt.simulate:
@@ -360,10 +355,6 @@ def process_height_result(img, bboxs, cls_confs, cls_idss, path ,opt,vid_writer)
                 draw.line([(a2n, b2n), (a3n, b3n)], fill=(0, 0, 255), width=2)
                 draw.line([(a0n, b0n), (a3n, b3n)], fill=(0, 0, 255), width=2)
 
-
-
-
-
                 #plt.imshow(pilimg)
                 #plt.show()
                 deep_img = np.array(pilimg)
@@ -391,17 +382,6 @@ def draw_one_pair_line(headpoint, insupoint, this_pair_obj_dis, im,head_pixel_wi
     # cv2.putText(im, str(this_pair_obj_dis)[:3]+'m'+str(vertical_dis_diff)[:3], line_middle, cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
     cv2.putText(im, str(this_pair_obj_dis)[:4] , line_middle, cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
     # cv2.putText(im, str(this_pair_obj_dis)[:4] , insupoint, cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
-
-
-def segment_work(img, one_pair):
-    print('segmentation work')
-
-    head = one_pair[0][4] 
-    insu = one_pair[1][4]
-    xmin = insu[0][0]
-    xmax = insu[1][0]
-    ymin = insu[0][1]
-    ymax = insu[1][1]
 
 
 
