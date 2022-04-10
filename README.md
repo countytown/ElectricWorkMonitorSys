@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/38877851/162617483-ce133826-9206-49dd-
 
 
 
-## Brief Introduction
-This is the source code for our paper "Real-time safety distance warning framework for proximity detection based on oriented object detection and pinhole model".  The usage and demo will be available soon. If citation is needed, please contact the author.
+## Introduction
+This is the source code for our paper "Real-time safety distance warning framework for proximity detection based on oriented object detection and pinhole model".  More information will be available soon.
 ## Dataset
 We provide the original dataset at https://pan.baidu.com/s/1mYue8Jmjt5jzUoFmT_Sh0w, and the code is 99xn. The citation information will be available after acceptance and contact the author for usage permission before that.
