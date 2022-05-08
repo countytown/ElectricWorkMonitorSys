@@ -288,10 +288,10 @@ def process_height_result(img, bboxs, cls_confs, cls_idss, path ,opt,vid_writer)
     objNperList = []
     if len(insuInfo) > 0 or len(headInfo) > 0:
         # print('L NOT EMPTY,CALCULATE DISTANCE.')
-        for ee, i in enumerate(headInfo):  # 全连接对 std_per_cor_list
+        for ee, i in enumerate(headInfo):  
             for e, j in enumerate(insuInfo):
                 NOid_item = [i, j]  # [[Hpoint,Hwidth],[InsuPoint,InsuWidth]]
-                objNperList.append(NOid_item)  # cupNperList = [(p1,c1,objID),(p1,c2,objID),...]  注意顺序！！！
+                objNperList.append(NOid_item)  # cupNperList = [(p1,c1,objID),(p1,c2,objID),...]  
 
         for one_pair in objNperList:
             '''[HeadUpmidpoint, HeadWidth, '0', rect, waijie2point]'''
@@ -305,12 +305,12 @@ def process_height_result(img, bboxs, cls_confs, cls_idss, path ,opt,vid_writer)
 
 
             vertical_dis_diff = abs(head_dis - insu_dis)
-            mean_D,horizontal_dis_diff = get_horizontal_len(headInfo, insuInfo, head_dis, insu_dis)  # 水平距离
+            mean_D,horizontal_dis_diff = get_horizontal_len(headInfo, insuInfo, head_dis, insu_dis) 
             # plot_one_box(headInfo[2], img, label=str(head_dis)[:3], color=(0, 0, 255))
             # plot_one_box(insuInfo[2], img, label=str(insu_dis)[:3], color=(100, 255, 100))
             this_pair_obj_dis_plane = (vertical_dis_diff ** 2 + horizontal_dis_diff ** 2) ** 0.5
-            head_represent_point = headInfo[0] #头部的代表点
-            insu_represent_point = insuInfo[0]#绝缘子的代表点
+            head_represent_point = headInfo[0] 
+            insu_represent_point = insuInfo[0]
             y_diff_pix = abs(insu_represent_point[1] - head_represent_point[1])
 
             '''S0 on projected plane'''
