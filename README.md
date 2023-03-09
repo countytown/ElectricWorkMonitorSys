@@ -8,8 +8,10 @@ A monitor system for electrical working, including object detection, tracking, a
 We provide the original dataset (labeled) at https://pan.baidu.com/s/1mYue8Jmjt5jzUoFmT_Sh0w, and the code is 99xn. The citation information will be available after acceptance and contact the author for usage permission before that.
 
 ## Image Demo
-![2 mp4_20220220_204000899](https://user-images.githubusercontent.com/38877851/154842848-f50b1b69-0edb-4e17-881a-ad7c370f20b7.jpg)
-![demo1 mp4_20220226_182504380](https://user-images.githubusercontent.com/38877851/155839938-99557328-3c45-49e5-bde9-b10c338eae11.jpg)
+<!-- ![2 mp4_20220220_204000899](https://user-images.githubusercontent.com/38877851/154842848-f50b1b69-0edb-4e17-881a-ad7c370f20b7.jpg) -->
+<!-- ![demo1 mp4_20220226_182504380](https://user-images.githubusercontent.com/38877851/155839938-99557328-3c45-49e5-bde9-b10c338eae11.jpg) -->
+<img src="https://user-images.githubusercontent.com/38877851/154842848-f50b1b69-0edb-4e17-881a-ad7c370f20b7.jpg" width="400">
+<img src="https://user-images.githubusercontent.com/38877851/155839938-99557328-3c45-49e5-bde9-b10c338eae11.jpg" width="400">
 
 ## Video Demo
 https://user-images.githubusercontent.com/38877851/162617483-ce133826-9206-49dd-a3a0-179e43ace1e5.mp4  (No ground truth and no calibration is set.)
