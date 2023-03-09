@@ -17,14 +17,14 @@ https://user-images.githubusercontent.com/38877851/200719842-22530725-3875-414f-
 
 ## Citation
 @article{li2023fast,
-  title={Fast safety distance warning framework for proximity detection based on oriented object detection and pinhole model},
-  author={Li, Hao and Qiu, Junhui and Yu, Kailong and Yan, Kai and Li, Quanjing and Yang, Yang and Chang, Rong},
-  journal={Measurement},
-  volume={209},
-  pages={112509},
-  year={2023},
-  publisher={Elsevier}
-}
+  title={Fast safety distance warning framework for proximity detection based on oriented object detection and pinhole model},  
+  author={Li, Hao and Qiu, Junhui and Yu, Kailong and Yan, Kai and Li, Quanjing and Yang, Yang and Chang, Rong},  
+  journal={Measurement},  
+  volume={209},  
+  pages={112509},  
+  year={2023},  
+  publisher={Elsevier}  
+}  
 
 ## Acknowledgement
 For usage of the source code and dataset, pelase contact the author first.
