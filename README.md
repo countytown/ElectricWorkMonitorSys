@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/38877851/162617483-ce133826-9206-49dd-
 https://user-images.githubusercontent.com/38877851/200719842-22530725-3875-414f-a543-032bfab52827.mp4  (Ground truth distance is 1.2)
 
 ## Citation
-Please cite the following reference for your academic research:\\
+Please cite the following reference for your academic research:<br>
 @article{li2023fast,
   title={Fast safety distance warning framework for proximity detection based on oriented object detection and pinhole model},  
   author={Li, Hao and Qiu, Junhui and Yu, Kailong and Yan, Kai and Li, Quanjing and Yang, Yang and Chang, Rong},  
